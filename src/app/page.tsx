@@ -1,101 +1,122 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaw } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="bg-pink-50 text-gray-900">
+      {/* 🔹 Hero 區塊 */}
+      <section id="home" className="relative w-full h-[500px]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/banner.jpg"
+          alt="獸醫診所"
+          layout="fill"
+          objectFit="cover"
+          quality={90}
+          className="rounded-b-3xl"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* 🔹 關於我們 */}
+      <section id="about" className="max-w-6xl mx-auto py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+          <FaPaw className="text-yellow-500" /> 關於我們
+        </h2>
+        <div className="bg-white shadow-lg rounded-3xl p-8 mt-6">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            因為對動物的熱愛，我們踏入動物醫療的世界，轉眼間已走過多年時光。
+            懷抱著「讓每位來到醫院的毛小孩都能安心接受最適切的醫療照護，如同回家一般」的初衷，我們一步步創立了東南動物醫院。
+            <br />
+            <br />
+            我們深信，醫療並非絕對的對與錯，而是透過細心觀察、理性判斷與專業討論，不斷精進診療方式，為毛孩提供更完善的照護。
+            <br />
+            <br />
+            東南動物醫院，與您一同守護毛孩的每一天 ❤️。
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* 🔹 院長資訊 */}
+      <section id="director" className="max-w-6xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center gap-8">
+        {/* 院長照片 */}
+        <div className="w-full md:w-1/2">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/director.jpg"
+            alt="院長 劉彥杰"
+            width={600}
+            height={600}
+            className="rounded-2xl border-4 border-yellow-400 shadow-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+
+        {/* 院長介紹 */}
+        <div className="w-full md:w-1/2 bg-white shadow-lg rounded-3xl p-8">
+          <h2 className="text-3xl font-bold text-pink-600 flex items-center gap-2">
+            <FaPaw className="text-yellow-500" /> 院長資訊
+          </h2>
+          <p className="mt-4 text-lg text-gray-700">
+            劉彥杰院長擁有 35 年以上動物醫療經驗，堪稱獸醫界百科全書。
+            <br />
+            溫暖又熱心的院長率領所有東南專業醫師群來為大家服務，毛孩們健康是我們最大的心願！🐶🐱
+          </p>
+        </div>
+      </section>
+
+      {/* 🔹 主治項目 */}
+      <section id="services" className="max-w-6xl mx-auto py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+          <FaPaw className="text-yellow-500" /> 主治項目
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {[
+            "健康檢查與疫苗接種",
+            "一般內科與外科診療",
+            "牙科護理與手術",
+            "緊急醫療服務",
+            "諾亞寵物高壓氧",
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-3xl p-6 text-lg flex items-center gap-2"
+            >
+              <FaPaw className="text-yellow-500 text-2xl" /> {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 🔹 聯絡方式 */}
+      <section id="contact" className="max-w-6xl mx-auto py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold text-pink-600 flex items-center justify-center gap-2">
+          <FaPaw className="text-yellow-500" /> 聯絡方式
+        </h2>
+        <div className="bg-white shadow-lg rounded-3xl p-8 mt-6">
+          <p className="text-lg text-gray-700 flex items-center justify-center gap-2">
+            <FaMapMarkerAlt className="text-blue-500" />
+            地址：台中市北屯區崇德路二段30號
+          </p>
+          <p className="text-lg text-gray-700 flex items-center justify-center gap-2 mt-2">
+            <FaPhone className="text-green-500" />
+            電話：04-2296-0753
+          </p>
+          <p className="text-lg text-gray-700 flex items-center justify-center gap-2 mt-2">
+            <FaEnvelope className="text-red-500" />
+            信箱：ufat0305@gmail.com
+          </p>
+        </div>
+
+        {/* 🔹 Google 地圖嵌入 (增加寬度 + 強制繁體中文) */}
+        <div className="mt-8 w-full flex justify-center">
+          <iframe
+            title="Google Maps - 台中市北屯區崇德路二段30號"
+            className="w-full md:w-[900px] h-[300px] rounded-lg shadow-lg"
+            src="https://www.google.com/maps?q=台中市北屯區崇德路二段30號&output=embed&hl=zh-TW"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
