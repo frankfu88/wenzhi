@@ -1,7 +1,7 @@
-"use client"; // ✅ 讓這個組件變成 Client Component
+"use client"; // ✅ 這是 Client Component
 
 import { useState } from "react";
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +28,10 @@ export default function Navbar() {
       {/* 🔹 漢堡選單 (手機版) */}
       {isOpen && (
         <nav className="md:hidden bg-blue-700 text-white py-4 space-y-3 text-center">
-          <a href="#about" className="block hover:bg-blue-500 py-2">關於我們</a>
-          <a href="#director" className="block hover:bg-blue-500 py-2">院長資訊</a>
-          <a href="#services" className="block hover:bg-blue-500 py-2">主治項目</a>
-          <a href="#contact" className="block hover:bg-blue-500 py-2">聯絡方式</a>
+          <a href="#about" className="block hover:bg-blue-500 py-2" onClick={() => setIsOpen(false)}>關於我們</a>
+          <a href="#director" className="block hover:bg-blue-500 py-2" onClick={() => setIsOpen(false)}>院長資訊</a>
+          <a href="#services" className="block hover:bg-blue-500 py-2" onClick={() => setIsOpen(false)}>主治項目</a>
+          <a href="#contact" className="block hover:bg-blue-500 py-2" onClick={() => setIsOpen(false)}>聯絡方式</a>
         </nav>
       )}
     </header>

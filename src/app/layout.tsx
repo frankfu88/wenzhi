@@ -1,4 +1,5 @@
-import Navbar from "./Navbar"; // ✅ 正確導入 Navbar (大寫)
+import Navbar from "./Navbar"; // ✅ 引入 Navbar
+import Banner from "./Banner"; // ✅ 引入 Banner
 import "@/styles/globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -10,7 +11,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>東南動物醫院</title>
       </head>
       <body className="bg-white text-gray-900">
-        <Navbar /> {/* ✅ 直接使用獨立的 Navbar */}
+        <Navbar /> {/* ✅ Navbar (漢堡選單) */}
+        <Banner /> {/* ✅ 加入 Banner，確保手機版適應 */}
 
         {/* 🔹 主要內容 */}
         <main className="pt-[100px] px-4">{children}</main>
