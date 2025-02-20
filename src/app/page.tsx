@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import Link from "next/link";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaw } from "react-icons/fa";
 
 export default function Home() {

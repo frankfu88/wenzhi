@@ -1,7 +1,6 @@
 "use client"; // ✅ 這是 Client Component
 
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
