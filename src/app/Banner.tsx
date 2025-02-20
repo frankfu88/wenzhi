@@ -1,4 +1,4 @@
-"use client"; // ✅ 這是 Client Component
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -8,9 +8,9 @@ export default function Banner() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // ✅ 手機版：小於 768px
+      setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 
@@ -18,12 +18,12 @@ export default function Banner() {
   }, []);
 
   return (
-    <section id="home" className="relative w-full max-h-[600px]">
+    <section id="home" className="relative w-full h-[250px] md:h-[400px] lg:h-[500px]">
       <Image
-        src={isMobile ? "/mobile-banner.jpg" : "/banner.jpg"} // ✅ 手機版用 mobile-banner
+        src={isMobile ? "/mobile-banner.jpg" : "/banner.jpg"} // ✅ 手機用 mobile-banner.jpg，但仍是橫式
         alt="獸醫診所"
         layout="fill"
-        objectFit="contain" // ✅ 避免裁切
+        objectFit="cover" // ✅ 讓圖片填滿，但不會變形
         className="w-full h-full"
       />
     </section>

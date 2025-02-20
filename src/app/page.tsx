@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="bg-pink-50 text-gray-900">
       {/* 🔹 Hero 區塊 */}
-      <section id="home" className="relative w-full h-[500px]">
+      {/* <section id="home" className="relative w-full h-[500px]">
         <Image
           src="/banner.jpg"
           alt="獸醫診所"
@@ -14,7 +14,7 @@ export default function Home() {
           quality={90}
           className="rounded-b-3xl"
         />
-      </section>
+      </section> */}
 
       {/* 🔹 關於我們 */}
       <section id="about" className="max-w-6xl mx-auto py-20 px-6 text-center">
