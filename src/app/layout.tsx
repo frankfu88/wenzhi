@@ -1,5 +1,5 @@
+import Navbar from "./Navbar"; // ✅ 正確導入 Navbar (大寫)
 import "@/styles/globals.css";
-import Link from "next/link";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,18 +10,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>東南動物醫院</title>
       </head>
       <body className="bg-white text-gray-900">
-        {/* 🔹 導覽列 */}
-        <header className="bg-blue-600 text-white py-4 fixed top-0 left-0 w-full z-50 shadow-md">
-          <nav className="max-w-6xl mx-auto flex justify-center space-x-8 text-lg font-medium">
-            <a href="#about" className="hover:text-gray-300">關於我們</a>
-            <a href="#director" className="hover:text-gray-300">院長資訊</a>
-            <a href="#services" className="hover:text-gray-300">主治項目</a>
-            <a href="#contact" className="hover:text-gray-300">聯絡方式</a>
-          </nav>
-        </header>
+        <Navbar /> {/* ✅ 直接使用獨立的 Navbar */}
 
         {/* 🔹 主要內容 */}
-        <main className="pt-[80px] px-4">{children}</main>
+        <main className="pt-[100px] px-4">{children}</main>
 
         {/* 🔹 頁尾 */}
         <footer className="bg-blue-100 text-center py-6 mt-12 text-gray-700">
