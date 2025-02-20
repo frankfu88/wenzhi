@@ -1,7 +1,7 @@
 "use client"; // ✅ 讓這個組件變成 Client Component
 
 import { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
