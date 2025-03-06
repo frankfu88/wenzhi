@@ -58,7 +58,7 @@ export default function Home() {
           <FaPaw className="text-yellow-500" /> 主治項目
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {/* 🔹 內科診療 - 可點擊導向 `/internal` */}
+          {/* 🔹 內科 - 可點擊導向 `/internal` */}
           <div
             onClick={() => router.push("/internal")} 
             className="bg-[#E6D6CC] shadow-md rounded-xl p-6 text-lg flex items-center gap-2 cursor-pointer hover:bg-[#d5c3b8] transition"

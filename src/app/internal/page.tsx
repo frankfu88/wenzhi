@@ -1,8 +1,10 @@
 "use client";
 
 import { FaPaw } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function InternalMedicine() {
+  const router = useRouter();
   return (
     <main className="bg-[#E6D6CC] text-gray-900 min-h-screen py-20 px-6">
       <section className="max-w-6xl mx-auto text-center">
@@ -80,6 +82,19 @@ export default function InternalMedicine() {
             </div>
           ))}
         </div>
+
+        {/* 🔹 聯繫區塊 */}
+        <div className="mt-12 bg-[#5A4032] text-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-2xl font-bold">您的寵物有上述症狀嗎？</h2>
+          <p className="mt-2 text-lg">您的寵物有上述症狀嗎？立即聯繫東南動物醫院，由專家來為您的寶貝提供治療！</p>
+          <button
+            onClick={() => router.push("/#contact")}
+            className="mt-4 bg-yellow-500 text-white py-3 px-6 rounded-lg text-lg font-bold hover:bg-yellow-600 transition"
+          >
+            聯絡我們
+          </button>
+        </div>
+
       </section>
     </main>
   );
