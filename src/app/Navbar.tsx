@@ -25,7 +25,7 @@ export default function Navbar() {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
 
-    setIsOpen(false);
+    setIsOpen(false); // ✅ 收起選單
   };
 
   return (
@@ -38,24 +38,21 @@ export default function Navbar() {
         <nav className="hidden md:flex space-x-8 text-lg font-medium">
           <button onClick={() => handleNavClick("about")} className="hover:text-gray-600">關於我們</button>
           <button onClick={() => handleNavClick("director")} className="hover:text-gray-600">院長資訊</button>
-
-          {/* 🔹 只負責滾動的主治項目 */}
-          <button onClick={() => handleNavClick("services")} className="hover:text-gray-600">
-            主治項目
-          </button>
-
-          <Link href="/pricing" className="hover:text-gray-600">價格一覽</Link>
+          <button onClick={() => handleNavClick("services")} className="hover:text-gray-600">主治項目</button>
+          {/* ✅ 當點擊價格一覽時，自動收起 Navbar */}
+          <Link href="/pricing" className="hover:text-gray-600" onClick={() => setIsOpen(false)}>價格一覽</Link>
           <button onClick={() => handleNavClick("contact")} className="hover:text-gray-600">聯絡方式</button>
         </nav>
       </div>
 
+      {/* ✅ 手機版選單修正 */}
       {isOpen && (
         <nav className="md:hidden bg-gray-100 text-gray-900 py-4 space-y-3 text-center">
-          <button onClick={() => handleNavClick("about")} className="block hover:bg-gray-200 py-2">關於我們</button>
-          <button onClick={() => handleNavClick("director")} className="block hover:bg-gray-200 py-2">院長資訊</button>
-          <button onClick={() => handleNavClick("services")} className="block hover:bg-gray-200 py-2">主治項目</button>
-          <Link href="/pricing" className="block hover:bg-gray-200 py-2">價格一覽</Link>
-          <button onClick={() => handleNavClick("contact")} className="block hover:bg-gray-200 py-2">聯絡方式</button>
+          <button onClick={() => handleNavClick("about")} className="block w-full hover:bg-gray-200 py-2">關於我們</button>
+          <button onClick={() => handleNavClick("director")} className="block w-full hover:bg-gray-200 py-2">院長資訊</button>
+          <button onClick={() => handleNavClick("services")} className="block w-full hover:bg-gray-200 py-2">主治項目</button>
+          <Link href="/pricing" className="block w-full hover:bg-gray-200 py-2" onClick={() => setIsOpen(false)}>價格一覽</Link>
+          <button onClick={() => handleNavClick("contact")} className="block w-full hover:bg-gray-200 py-2">聯絡方式</button>
         </nav>
       )}
     </header>
