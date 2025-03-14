@@ -12,9 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-TW">
       <head>
+        <title>東南動物醫院</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>東南動物醫院</title>
       </head>
       <body className="bg-white text-gray-900">
         <Navbar /> {/* ✅ Navbar 一直顯示 */}

@@ -29,8 +29,8 @@ export default function Home() {
 
         {/* 🔹 東南動物醫院的優勢 */}
         <div className="bg-white shadow-xl rounded-xl p-8 mt-12">
-          <h2 className="text-3xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
-            <FaPaw className="text-yellow-500" /> 東南動物醫院的優勢
+          <h2 className="text-4xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
+            <FaPaw className="text-yellow-500" /> 我們的優勢
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {[
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-1/2 bg-white shadow-xl rounded-xl p-8">
-          <h2 className="text-3xl font-bold text-[#5A4032] flex items-center gap-2">
+          <h2 className="text-4xl font-bold text-[#5A4032] flex items-center gap-2">
             <FaPaw className="text-yellow-500" /> 院長資訊
           </h2>
           <p className="mt-4 text-lg text-gray-700">
