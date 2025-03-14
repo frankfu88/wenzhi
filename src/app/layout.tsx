@@ -25,8 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* 🔹 頁尾 */}
         <footer className="bg-blue-100 text-center py-6 mt-12 text-gray-700">
-          <p>© {new Date().getFullYear()} 東南動物醫院 - 守護毛孩的健康</p>
+          <p>東南動物醫院 版權所有 © {new Date().getFullYear()} All Rights Reserved.</p>
         </footer>
+
       </body>
     </html>
   );
