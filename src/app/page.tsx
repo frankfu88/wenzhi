@@ -182,28 +182,35 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
             <FaPaw className="text-yellow-500" /> 停車資訊
           </h2>
+          <p className="text-lg text-center text-gray-700 mt-2">
+            附近有多個停車場可供使用，點擊下方地點即可導航
+          </p>
 
           {/* 🔹 停車場列表 */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-lg">
             {[
-              { name: "崇德北平自動收費停車場", distance: "180公尺" },
-              { name: "觀自在禪寺停車場", distance: "210公尺" },
-              { name: "北平路停車場", distance: "230公尺" },
-              { name: "嘟嘟房停車場 - 台中崇德站", distance: "260公尺" },
-              { name: "北屯停車場", distance: "300公尺" },
-              { name: "uTagGo 河邑河北二站", distance: "300公尺" },
-              { name: "24H 收費停車場", distance: "350公尺" },
-              { name: "文昌漢口停車場", distance: "350公尺" },
-              { name: "大德室內停車場", distance: "400公尺" },
-              { name: "河北停車場", distance: "400公尺" },
+              { name: "崇德北平自動收費停車場", link: "https://www.google.com/maps?q=406台中市北屯區崇德路二段103-106號" },
+              { name: "觀自在禪寺停車場", link: "https://www.google.com/maps?q=406台中市北屯區青島路四段28號" },
+              { name: "北平路停車場", link: "https://www.google.com/maps?q=406台中市北屯區北平路三段186號" },
+              { name: "嘟嘟房停車場 - 台中崇德站", link: "https://www.google.com/maps?q=406台中市北屯區崇德路二段103號" },
+              { name: "北屯停車場", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段3號" },
+              { name: "uTagGo 河邑河北二站", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段65號" },
+              { name: "文昌漢口停車場", link: "https://www.google.com/maps?q=406台中市北屯區漢口路五段15號" },
+              { name: "大德室內停車場", link: "https://www.google.com/maps?q=404台中市北屯區青島路四段58之1號" },
+              { name: "河北停車場", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段80號" },
             ].map((parking, index) => (
-              <div key={index} className="bg-white shadow-md rounded-lg p-4 flex justify-between">
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg p-4 text-center cursor-pointer hover:bg-gray-100 transition"
+                onClick={() => window.open(parking.link, "_blank")}
+              >
                 <span className="text-gray-800">{parking.name}</span>
-                <span className="text-gray-600">{parking.distance}</span>
               </div>
             ))}
           </div>
         </div>
+
+
       </section>
     </main>
   );
