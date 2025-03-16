@@ -182,26 +182,29 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
             <FaPaw className="text-yellow-500" /> 停車資訊
           </h2>
-          <p className="text-lg text-center text-gray-700 mt-2">
-            附近有多個停車場可供使用，請參考下方地圖。
-          </p>
 
-          {/* 🔹 停車場地圖嵌入 */}
-          <div className="w-full flex justify-center mt-6">
-            <iframe
-              title="Google Maps - 附近停車資訊"
-              className="w-full max-w-[1100px] h-[400px] rounded-lg shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3640.072584003638!2d120.68288137534898!3d24.169187078387015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5YGc6LuK5aC0!5e0!3m2!1szh-TW!2stw!4v1741941784500!5m2!1szh-TW!2stw"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          {/* 🔹 停車場列表 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-lg">
+            {[
+              { name: "崇德北平自動收費停車場", distance: "180公尺" },
+              { name: "觀自在禪寺停車場", distance: "210公尺" },
+              { name: "北平路停車場", distance: "230公尺" },
+              { name: "嘟嘟房停車場 - 台中崇德站", distance: "260公尺" },
+              { name: "北屯停車場", distance: "300公尺" },
+              { name: "uTagGo 河邑河北二站", distance: "300公尺" },
+              { name: "24H 收費停車場", distance: "350公尺" },
+              { name: "文昌漢口停車場", distance: "350公尺" },
+              { name: "大德室內停車場", distance: "400公尺" },
+              { name: "河北停車場", distance: "400公尺" },
+            ].map((parking, index) => (
+              <div key={index} className="bg-white shadow-md rounded-lg p-4 flex justify-between">
+                <span className="text-gray-800">{parking.name}</span>
+                <span className="text-gray-600">{parking.distance}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-
-
     </main>
   );
 }
