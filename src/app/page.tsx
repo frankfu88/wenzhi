@@ -135,8 +135,16 @@ export default function Home() {
               <FaEnvelope className="text-red-500" />
               信箱：ufat0305@gmail.com
             </p>
-            <p className="flex items-center gap-2">
-              LINE線上諮詢：@869dqxmv
+            <p className="flex items-center gap-1 whitespace-nowrap">
+              <span>LINE線上諮詢：</span>
+              <a
+                href="https://line.me/R/ti/p/@869dqxmv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 underline hover:text-blue-900 transition"
+              >
+                @869dqxmv
+              </a>
             </p>
           </div>
 
