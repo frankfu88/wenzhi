@@ -72,33 +72,7 @@ export default function NoahOxygen() {
           </div>
         </div>
 
-        {/* 🔹 初生動物高壓氧艙的作用 */}
-        <div className="bg-white shadow-lg rounded-3xl p-8 mt-8">
-          <h2 className="text-3xl font-bold text-center">初生動物高壓氧艙的作用</h2>
-          <p className="text-lg text-center text-gray-700 mt-2">
-            高壓氧艙技術在初生動物的健康管理中發揮關鍵作用，能夠提升存活率並促進成長發育。
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {[{
-              title: "提升母體受孕率",
-              description: "懷孕前進行高壓氧及光療調理，每日一次（60 分鐘），可增強母體健康，提高受孕機率。"
-            }, {
-              title: "改善胚胎發育",
-              description: "懷孕期間每天吸氧及光療 60 分鐘，有助於胎兒健康發展，增強母體與胎兒免疫力。"
-            }, {
-              title: "降低幼獸天折率",
-              description: "初生動物出生後 10-15 天內每日吸氧 60 分鐘，2 週後每 3 天一次，可增強成長與免疫力，顯著減少幼獸天折率。"
-            }, {
-              title: "促進產後恢復",
-              description: "母體產後持續吸氧及光療 7 天，加速傷口癒合並促進身體恢復，減少修護期與藥物需求。"
-            }].map((feature, index) => (
-              <div key={index} className="bg-[#F5F1ED] shadow-md rounded-xl p-6 text-lg">
-                <h3 className="text-xl font-bold text-green-700">{feature.title}</h3>
-                <p className="mt-2 text-gray-700">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
         
         {/* 🔹 特點介紹 */}
         <div className="bg-white shadow-lg rounded-3xl p-8 mt-12">
@@ -107,7 +81,7 @@ export default function NoahOxygen() {
             高壓氧艙搭載多層設計與先進光療技術，提升動物健康與治療效果。
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-            {["提升存活率", "多層抽屜式設計", "高效氧艙", "雙進壓閘", "紫外線滅菌", "光療系統", "恆溫空調"].map((feature, index) => (
+            {["多層抽屜式設計", "高效氧艙", "雙進壓閘", "紫外線滅菌", "光療系統", "恆溫空調"].map((feature, index) => (
               <div key={index} className="bg-[#F5F1ED] shadow-md rounded-xl p-6 text-lg text-center">
                 {feature}
               </div>
