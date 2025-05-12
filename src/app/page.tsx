@@ -35,9 +35,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
             {[
               { title: "隔離病房", description: "提供安全的隔離環境，有效防止傳染病擴散。" },
-              { title: "犬貓重症ICU病房", description: "專業監護設備，24 小時照護危重動物。" },
-              { title: "寵物保險指定醫院", description: "支援多種寵物保險，減輕您的醫療負擔。" },
-              { title: "高壓氧保養", description: "透過高壓氧艙提升細胞含氧量，加速術後癒合、改善炎症與慢性疼痛。" }
+              { title: "犬貓重症ICU病房", description: "專業監護設備，24 小時照護危重動物。" },              
+              { title: "諾亞高壓氧保養", description: "透過高壓氧艙提升細胞含氧量，加速術後癒合、改善炎症與慢性疼痛。" },
+              { title: "寵物保險指定醫院", description: "支援多種寵物保險，減輕您的醫療負擔。" }
             ].map((advantage, index) => (
               <div key={index} className="bg-[#F5F1ED] shadow-md rounded-xl p-6 text-lg text-center">
                 <h3 className="text-xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
