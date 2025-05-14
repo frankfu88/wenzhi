@@ -10,7 +10,7 @@ import {
   FaChevronDown,
   FaChevronUp
 } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const servicesDetailed = [
   
