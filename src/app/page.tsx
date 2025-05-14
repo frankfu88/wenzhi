@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -12,6 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 
 const servicesDetailed = [
+  
   {
     label: "眼科門診",
     treatments: [
@@ -37,25 +39,142 @@ const servicesDetailed = [
     ]
   },
   {
-    label: "內科",
+    label: "中西整合醫學",
+    treatments: ["電針、雷射、中草藥、整合式療法"]
+  },
+  {
+    label: "內分泌科",
     treatments: [
-      "糖尿病、甲狀腺低下/亢進、庫興氏症、愛迪生氏症、X毛症等內分泌相關疾病診治"
+      "糖尿病",
+      "甲狀腺低下/亢進",
+      "庫興氏症",
+      "愛迪生氏症",
+      "X毛症等內分泌相關疾病診治"
+    ]
+  },
+  {
+    label: "牙科",
+    treatments: [
+      "牙周治療",
+      "洗牙",
+      "拔牙",
+      "3D全口腔電腦斷層檢查",
+      "牙科X光檢查"
     ]
   },
   {
     label: "腫瘤內科",
     treatments: [
-      "細胞學診斷、病理切片合作診斷"
+      "細胞學診斷與美國臨床病理專科獸醫師朱珮華醫師合作",
+      "病理診斷與中興大學動物疾病管制中心病理切片室合作"
     ]
   },
   {
-    label: "中西整合醫學",
-    treatments: ["電針、雷射、中草藥、整合式療法"]
+    label: "耳鼻喉內視鏡檢查",
+    treatments: [
+      "耳道內視鏡：耳道內視鏡檢查採樣，中耳引流灌洗清創",
+      "鼻腔內視鏡：鼻腔檢查採樣，鼻腔灌洗清創，後鼻孔狹窄氣球擴張術",
+      "喉頭氣管內視鏡：氣管支氣管盥洗採樣培養，氣管塌陷檢查"
+    ]
   },
   {
-    label: "健康檢查",
-    treatments: ["定期身體狀況評估、疾病早期預防與發現"]
+    label: "白內障特別門診",
+    treatments: [
+      "全眼球評估",
+      "白內障超音波乳化術",
+      "人工水晶體裝置"
+    ]
   },
+  {
+    label: "運動傷害與關節疾病特別門診",
+    treatments: [
+      "完全預約制",
+      "每週二上午10:00~12:00",
+      "肩關節發育異常/肘關節發育異常/髖關節發育異常/OCD/UAP",
+      "各式關節鏡手術/關節先天異常矯正手術",
+      "前十字韌帶斷裂治療: PRP注射/幹細胞注射/TTA手術/TPLO手術",
+      "PGR人工滑車溝手術"
+    ]
+  },
+  {
+    label: "水腦微創手術特別門診",
+    treatments: [
+      "完全預約制",
+      "每週五上午 10:00~12:00",
+      "門診評估病況 ",
+      "安排施行微創第三腦室開創術",
+    ]
+  },
+  {
+    label: "微創脊椎手術特別門診",
+    treatments: [
+      "完全預約制",
+      "每週三上午10:00~12:00門=診評估病況",
+      {
+        label: "安排施行：",
+        subitems: [
+          "單孔微創內視鏡脊椎手術",
+          "雙孔微創內視鏡脊椎手術",
+          "超音波引導神經根注射治療"
+        ]
+      }
+    ]
+  },
+  {
+    label: "胃癌腸癌特別門診",
+    treatments: [
+      "完全預約制",
+      "每週五上午 10:00~12:00",
+      "微創手術治療",
+      "門診評估病況",
+      "安排施行微創手術"
+    ]
+  },
+  {
+    label: "肺癌腸癌特別門診",
+    treatments: [
+      "完全預約制",
+      "每週五上午 10:00~12:00",
+      "微創手術治療",
+      "門診評估病況",
+      "胸腔鏡、腫瘤分期與摘除"
+    ]
+  },
+  {
+    label: "電漿滅菌及轉診服務",
+    treatments: [
+      <span className="text-red-600" key="link">
+        請聯繫LINE@
+        <a
+          href="https://lin.ee/MtJUAS6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline ml-1"
+        >
+          https://lin.ee/MtJUAS6
+        </a>
+      </span>
+    ]
+  },
+  
+  {
+    label: "健康檢查",
+    treatments: [
+      {
+        type: "paragraph",
+        content: `毛寶獸齡不如人類綿長，健康檢查對於確保毛寶的良好健康狀態以及預防潛在的健康風險非常重要。`
+      },
+      {
+        type: "paragraph",
+        content: `建議每年定期檢查，持續關心毛寶的體重和營養狀態，有助於預防肥胖或營養不良等問題。合理的體重和營養是維護健康的重要方式。`
+      },
+      {
+        type: "paragraph",
+        content: `另一方面，健康檢查有助於預防常見疾病，提早發現並早治療，採取適當的治療和管理措施。`
+      }
+    ]
+  },
+  
   {
     label: "預防針",
     treatments: ["幼貓、幼犬、成貓、成犬疫苗接種"]
@@ -63,13 +182,61 @@ const servicesDetailed = [
   {
     label: "視訊看診",
     treatments: [
-      "30分鐘/$500（LINE Pay 或匯款）",
-      "高齡、行動不便或關注動物福利的飼主"
+      {
+        type: "paragraph",
+        content: "視訊看診費用為30分鐘/$500，支付方式可使用 LINE PAY或匯款，需事先付款。"
+      },
+      {
+        label: "服務對象：",
+        subitems: [
+          "高齡動物的飼主：通常是8歲以上的貓狗",
+          "不便出行的飼主：例如交通不便、行動不便的家庭。",
+          "關注動物福利的飼主：希望減少動物因往返診所的壓力。"
+        ]
+      }
     ]
   },
   {
-    label: "高壓氧治療",
-    treatments: ["促進癒合、改善慢性疼痛與炎症"]
+    label: "出診服務",
+    treatments: [
+      {
+        type: "paragraph",
+        content: "預約前需事先與醫師視訊了解初步狀況，"
+      },
+      {
+        type: "paragraph",
+        content: "視訊看診費用為30分鐘/$500，支付方式可使用 LINE PAY 或匯款，需事先付款。"
+      },
+      {
+        type: "paragraph",
+        content: "出診範圍僅限台中市，到府來回車資費用由患者支付。"
+      },
+      {
+        type: "paragraph",
+        content: "到府看診費用為每30分鐘/$1000，線上預約需預付訂金 $2000。"
+      }
+    ]
+  },
+  {
+    label: "諾亞高壓氧保養",
+    treatments: [
+      {
+        type: "paragraph",
+        content: "本院高壓氧設備升級了喔～已經開始為毛小孩服務！"
+      },
+      {
+        type: "paragraph",
+        content: "⭐ 高壓氧保養：藉由壓力和氧氣，提高血漿及組織含氧濃度並增強血中血球殺菌和自癒能力，以達到保養目的。"
+      },
+      {
+        type: "paragraph",
+        content: "🔴 可用於皮膚傷口修復、心血管、神經系統損傷、口腔、腸胃道、肌肉骨骼、傳染感染性疾病、老年疾病、癌症"
+      },
+      {
+        type: "paragraph",
+        content: "👉 以上適應症需獸醫師診斷"
+      }
+    ]
   }
 ];
 
@@ -100,7 +267,7 @@ export default function Home() {
         </p>
         </div>
 
-        {/* 🔹 東南動物醫院的優勢 */}
+        {/* 🔹 我們的優勢 */}
         <div className="bg-white shadow-xl rounded-xl p-8 mt-12">
           <h2 className="text-4xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
             <FaPaw className="text-yellow-500" /> 我們的優勢
@@ -128,7 +295,7 @@ export default function Home() {
         <div className="w-full md:w-1/2">
           <Image
             src="/director.jpg"
-            alt="院長 劉彥杰"
+            alt="院長 羅致宇"
             width={600}
             height={600}
             className="rounded-xl border-4 border-yellow-500 shadow-xl"
@@ -152,46 +319,76 @@ export default function Home() {
       </section>
 
       {/* 🔹 主治項目 */}
-      <section
-        id="services"
-        className="max-w-6xl mx-auto py-16 px-6 text-center bg-[#9D8575] text-white shadow-xl rounded-xl"
-      >
-        <h2 className="text-4xl font-bold flex items-center justify-center gap-2">
-          <FaPaw className="text-yellow-500" /> 主治項目
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 text-left">
-          {servicesDetailed.map((service, index) => (
+      <section className="max-w-6xl mx-auto py-16 px-6 text-center bg-[#9D8575] text-white shadow-xl rounded-xl">
+      <h2 className="text-4xl font-bold flex items-center justify-center gap-2">
+        <FaPaw className="text-yellow-500" /> 主治項目
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 text-left">
+        {servicesDetailed.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-between bg-[#E6D6CC] text-gray-800 rounded-xl shadow-md p-6 transition-all duration-300"
+          >
             <div
-              key={index}
-              className="bg-[#E6D6CC] text-gray-800 rounded-xl shadow-md p-6 transition"
+              className="flex justify-between items-center cursor-pointer"
+              onClick={() => toggle(index)}
             >
-              <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => toggle(index)}
-              >
-                <h3 className="text-xl font-bold flex items-center gap-2">
-                  <FaPaw className="text-yellow-500" /> {service.label}
-                </h3>
-                {openIndex === index ? (
-                  <FaChevronUp className="text-[#5A4032]" />
-                ) : (
-                  <FaChevronDown className="text-[#5A4032]" />
-                )}
-              </div>
-
-              {openIndex === index && (
-                <ul className="mt-4 list-disc list-inside space-y-1 text-base text-gray-700">
-                  {service.treatments.map((treatment, i) => (
-                    <li key={i}>{treatment}</li>
-                  ))}
-                </ul>
+              <h3 className="text-xl font-bold flex items-center gap-2">
+                <FaPaw className="text-yellow-500" /> {service.label}
+              </h3>
+              {openIndex === index ? (
+                <FaChevronUp className="text-[#5A4032]" />
+              ) : (
+                <FaChevronDown className="text-[#5A4032]" />
               )}
             </div>
-          ))}
-        </div>
-      </section>
 
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === index ? "max-h-96 mt-4" : "max-h-0"
+              }`}
+            >
+              <ul className="list-disc list-inside space-y-1 text-base text-gray-700">
+              {service.treatments.map((treatment, i) => {
+  if (typeof treatment === "string" || React.isValidElement(treatment)) {
+    return <li key={i}>{treatment}</li>;
+  } else if (
+    typeof treatment === "object" &&
+    "label" in treatment &&
+    Array.isArray(treatment.subitems)
+  ) {
+    return (
+      <li key={i}>
+        {treatment.label}
+        <ul className="list-disc list-inside ml-5 mt-1 space-y-1">
+          {treatment.subitems.map((sub, j) => (
+            <li key={j}>{sub}</li>
+          ))}
+        </ul>
+      </li>
+    );
+  } else if (
+    typeof treatment === "object" &&
+    "type" in treatment &&
+    treatment.type === "paragraph" &&
+    "content" in treatment
+  ) {
+    return (
+      <li key={i} className="list-none">
+        <p className="text-gray-700 leading-relaxed">{treatment.content}</p>
+      </li>
+    );
+  } else {
+    return null;
+  }
+})}
+
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* 🔹 聯絡方式 */}
       <section id="contact" className="max-w-6xl mx-auto py-16 px-6 text-center bg-white shadow-xl rounded-xl">
@@ -228,7 +425,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 門診時間 & 探視時間 - 並排顯示 */}
+          {/* 門診時間 */}
           <div className="mt-6 flex flex-col md:flex-row justify-center gap-12">
             {/* 🔹 門診時間 */}
             <div className="flex-1 text-lg">
@@ -241,66 +438,20 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* 🔹 探視時間 */}
-            {/* <div className="flex-1 text-lg">
-              <h3 className="text-2xl font-bold text-[#5A4032] mb-2">探視時間</h3>
-              <p>周一到周日</p>
-              <ul className="mt-2 space-y-1">
-                <li>15:00 - 16:00</li>
-                <li>19:00 - 20:00</li>
-              </ul>
-            </div> */}
           </div>
         </div>
 
         {/* 🔹 Google 地圖嵌入 */}
         <div className="w-full flex justify-center mt-8">
-  <iframe
-    title="Google Maps - 羅大宇動物醫院"
-    className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.610259499438!2d120.656937!3d24.141174600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da485d7e9b5%3A0xfe092f6a6aef934b!2z576F5aSn5a6H5YuV54mp6Yar6Zmi772e5Lit6KW_5pW05ZCI6Yar5a246IiH5b6u5Ym15omL6KGT5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1747035281086!5m2!1szh-TW!2stw"
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
-
-
-
-        {/* 🔹 停車資訊 */}
-        {/* <div className="mt-12 bg-[#E6D6CC] shadow-lg rounded-xl p-8"> */}
-          {/* <h2 className="text-4xl font-bold text-[#5A4032] flex items-center justify-center gap-2">
-            <FaPaw className="text-yellow-500" /> 停車資訊
-          </h2>
-          <p className="text-lg text-center text-gray-700 mt-2">
-            附近有多個停車場可供使用，點擊下方地點即可導航
-          </p> */}
-
-          {/* 🔹 停車場列表 */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 text-lg">
-            {[
-              { name: "崇德北平自動收費停車場", link: "https://www.google.com/maps?q=406台中市北屯區崇德路二段103-106號" },
-              { name: "觀自在禪寺停車場", link: "https://www.google.com/maps?q=406台中市北屯區青島路四段28號" },
-              { name: "北平路停車場", link: "https://www.google.com/maps?q=406台中市北屯區北平路三段186號" },
-              { name: "嘟嘟房停車場 - 台中崇德站", link: "https://www.google.com/maps?q=406台中市北屯區崇德路二段103號" },
-              { name: "北屯停車場", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段3號" },
-              { name: "uTagGo 河邑河北二站", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段65號" },
-              { name: "文昌漢口停車場", link: "https://www.google.com/maps?q=406台中市北屯區漢口路五段15號" },
-              { name: "大德室內停車場", link: "https://www.google.com/maps?q=404台中市北屯區青島路四段58之1號" },
-              { name: "河北停車場", link: "https://www.google.com/maps?q=406台中市北屯區河北路二段80號" },
-            ].map((parking, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md rounded-lg p-4 text-center cursor-pointer hover:bg-gray-100 transition"
-                onClick={() => window.open(parking.link, "_blank")}
-              >
-                <span className="text-gray-800">{parking.name}</span>
-              </div>
-            ))}
-          </div> */}
-        {/* </div> */}
-
-
+        <iframe
+          title="Google Maps - 羅大宇動物醫院"
+          className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.610259499438!2d120.656937!3d24.141174600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da485d7e9b5%3A0xfe092f6a6aef934b!2z576F5aSn5a6H5YuV54mp6Yar6Zmi772e5Lit6KW_5pW05ZCI6Yar5a246IiH5b6u5Ym15omL6KGT5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1747035281086!5m2!1szh-TW!2stw"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
       </section>
     </main>
   );

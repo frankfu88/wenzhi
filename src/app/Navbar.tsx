@@ -40,7 +40,7 @@ export default function Navbar() {
           <button onClick={() => handleNavClick("director")} className="hover:text-gray-600">院長資訊</button>
           <button onClick={() => handleNavClick("services")} className="hover:text-gray-600">主治項目</button>
           {/* ✅ 當點擊價格一覽時，自動收起 Navbar */}
-          <Link href="/pricing" className="hover:text-gray-600" onClick={() => setIsOpen(false)}>價格一覽</Link>
+          {/* <Link href="/pricing" className="hover:text-gray-600" onClick={() => setIsOpen(false)}>價格一覽</Link> */}
           <button onClick={() => handleNavClick("contact")} className="hover:text-gray-600">聯絡方式</button>
         </nav>
       </div>
