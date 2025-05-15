@@ -12,13 +12,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-TW">
       <head>
-        <title>毛貓寵動物醫院</title>
+        <title>毛貓寵物醫院</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="bg-white text-gray-900">
         <Navbar /> {/* ✅ Navbar 一直顯示 */}
-        {!isPricingPage && <Banner />} {/* ✅ 只有非價格一覽頁面才顯示 Banner */}
+        {!isPricingPage && <Banner />}
 
         {/* 🔹 主要內容 */}
         <main className="pt-[100px] px-4">{children}</main>

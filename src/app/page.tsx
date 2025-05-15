@@ -216,6 +216,27 @@ const servicesDetailed = [
         content: "到府看診費用為每30分鐘/$1000，線上預約需預付訂金 $2000。"
       }
     ]
+  },
+  {
+    label: "諾亞高壓氧保養",
+    treatments: [
+      {
+        type: "paragraph",
+        content: "本院高壓氧設備升級了喔～已經開始為毛小孩服務！"
+      },
+      {
+        type: "paragraph",
+        content: "⭐ 高壓氧保養：藉由壓力和氧氣，提高血漿及組織含氧濃度並增強血中血球殺菌和自癒能力，以達到保養目的。"
+      },
+      {
+        type: "paragraph",
+        content: "🔴 可用於皮膚傷口修復、心血管、神經系統損傷、口腔、腸胃道、肌肉骨骼、傳染感染性疾病、老年疾病、癌症"
+      },
+      {
+        type: "paragraph",
+        content: "👉 以上適應症需獸醫師診斷"
+      }
+    ]
   }
 ];
 
@@ -274,7 +295,7 @@ export default function Home() {
         <div className="w-full md:w-1/2">
           <Image
             src="/director.jpg"
-            alt="院長 王耀鴻"
+            alt="院長 羅致宇"
             width={600}
             height={600}
             className="rounded-xl border-4 border-yellow-500 shadow-xl"
