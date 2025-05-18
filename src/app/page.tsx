@@ -8,7 +8,6 @@ import {
   FaMapMarkerAlt,
   FaPaw
 } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
