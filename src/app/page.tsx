@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { useState } from "react";
 import {
   FaPhone,
   FaMapMarkerAlt,
@@ -10,13 +9,6 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  
   return (
     <main className="bg-[#E6D6CC] text-gray-900">
       {/* 🔹 關於我們 */}
