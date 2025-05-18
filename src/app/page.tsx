@@ -257,15 +257,20 @@ export default function Home() {
           <FaPaw className="text-yellow-500" /> 關於我們
         </h2>
         <div className="bg-white shadow-xl rounded-xl p-8 mt-6">
-        <p className="text-lg text-gray-700 leading-relaxed">
-          羅大宇動物醫院位於台中市西區，致力於打造一個結合專業醫療與溫暖關懷的寵物照護空間。
-          我們秉持「以毛孩為本」的理念，提供從預防醫學、內外科治療，到中西醫整合療法的全方位服務。
-          <br /><br />
-          醫療團隊擁有豐富臨床經驗，並引進高壓氧治療、微創手術、影像診斷等先進技術，致力於提升診療品質與毛孩的生活福祉。
-          <br /><br />
-          除了醫療服務外，我們也關心動物福祉與飼主教育，積極參與流浪動物照護與社區推廣，期望成為每一位飼主在寵物健康旅程中的堅實後盾。
-        </p>
-        </div>
+  <p className="text-lg text-gray-700 leading-relaxed">
+    毛貓寵物動物醫院的誕生，源自一位獸醫師對動物深深的熱愛與責任感。他相信，每一隻寵物都應該被細緻照顧、被溫柔對待，不只是身體的病痛，更包括情緒的安撫與家庭的理解。
+    <br /><br />
+    為了實踐這份理想，寵物動物醫院打造了一個以「動物友善」為核心理念的診療空間，從動線設計、氣味管理到診療方式，處處用心，只為減少寵物的焦慮與壓力。院內的醫療團隊擁有專精於貓科、皮膚科、家醫科、中西醫整合療法、雷射治療、老年照護、腫瘤外科等豐富經驗，提供全方位且細緻的醫療服務。
+    <br /><br />
+    除了內外科與專科診療，我們也積極發展再生醫學與高階療法，從高壓氧治療到針灸調理，期望以更少的負擔帶來更深層的療癒效果。我們不只是解決眼前的病症，更關心寵物的整體福祉與長期生活品質。
+    <br /><br />
+    對我們來說，「醫療」從來不只是冷冰冰的技術，它應該是理解與信任的延伸。我們珍惜與每一位飼主的溝通時光，耐心傾聽，細心說明，只為讓每一位來到這裡的毛小孩與毛小孩爸媽都能感受到安心與尊重。
+    <br /><br />
+    在毛貓寵物動物醫院，我們陪伴的不只是疾病的治療，更是每一段與寵物共度的珍貴旅程。
+  </p>
+</div>
+
+
 
         {/* 🔹 我們的優勢 */}
         <div className="bg-white shadow-xl rounded-xl p-8 mt-12">
@@ -307,13 +312,16 @@ export default function Home() {
             <FaPaw className="text-yellow-500" /> 院長資訊
           </h2>
           <p>
-            羅致宇院長擁有國立中興大學獸醫所臨床組（心臟/眼科）碩士學位，
-            並具備多項國際認證，包括美國科羅拉多州立大學小動物微創脊椎手術認證、
-            澳洲雪梨大學臨床神經學程結業等。
+            王耀鴻醫師自嘉義大學獸醫系畢業以來，秉持著從小懷抱的正義感與穿上白袍貢獻社會的初心，致力於動物醫療領域，擁有豐富的臨床與教學經歷，尤專精於一般內科、外科、皮膚科與貓科醫療。
           </p>
           <p className="mt-3">
-            同時擔任台灣獸醫內視鏡微創醫學會理事，專精於微創手術、心臟內外科、
-            中獸醫整合療法等領域，致力於結合中西醫療，為毛孩打造最適切的照護方案。
+            現任全國動物醫院豐原分院院長，曾擔任全國動物醫院貓醫院院長與多家分院主治醫師，並活躍於各大專院校與業界講座，包括東海大學、國立屏東科技大學、亞太小動物獸醫師大會（FSAVA）、南友威動物藥品公司等，擔任客座講師與巡迴講座講師。
+          </p>
+          <p className="mt-3">
+            他不僅專注於臨床診療，也積極參與醫學教育與課程研發，曾多次於獸醫再教育研討會中發表，並參與皮膚病與青壯齡貓病課程編寫及直播課程主講。
+          </p>
+          <p className="mt-3">
+            王醫師以專業細膩的醫術與對動物的深厚熱忱，獲得飼主高度信賴，是寵物醫療領域中備受肯定的專業典範。
           </p>
         </div>
       </section>
@@ -402,25 +410,21 @@ export default function Home() {
           <div className="text-lg flex flex-col items-center gap-2">
             <p className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-blue-500" />
-              地址：403台中市西區存中街153號
+              地址：408台中市南屯區文心路一段372號
             </p>
             <p className="flex items-center gap-2">
               <FaPhone className="text-green-500" />
-              電話：04-23728378
+              電話：04-23286789
             </p>
-            {/* <p className="flex items-center gap-2">
-              <FaEnvelope className="text-red-500" />
-              信箱：ufat0305@gmail.com
-            </p> */}
             <p className="flex items-center gap-1 whitespace-nowrap">
               <span>LINE線上諮詢：</span>
               <a
-                href="https://line.me/R/ti/p/@rdk6209c"
+                href="https://line.me/R/ti/p/@315jaayn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-700 underline hover:text-blue-900 transition"
               >
-                @rdk6209c
+                @315jaayn
               </a>
             </p>
           </div>
@@ -430,23 +434,17 @@ export default function Home() {
             {/* 🔹 門診時間 */}
             <div className="flex-1 text-lg">
               <h3 className="text-2xl font-bold text-[#5A4032] mb-2">門診時間</h3>
-              <p>周一到周日</p>
-              <ul className="mt-2 space-y-1">
-                <li>早上 09:30 - 12:00（最後掛診時間為11:30）</li>
-                <li>下午 13:00 - 17:00（最後掛診時間為16:30）</li>
-                <li>晚上 18:00 - 21:30（最後掛診時間為21:00）</li>
-              </ul>
+              <p>周一到周日 09:00 - 21:00</p>
             </div>
-
           </div>
         </div>
 
         {/* 🔹 Google 地圖嵌入 */}
         <div className="w-full flex justify-center mt-8">
         <iframe
-          title="Google Maps - 羅大宇動物醫院"
+          title="Google Maps - 毛貓寵動物醫院"
           className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.610259499438!2d120.656937!3d24.141174600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693da485d7e9b5%3A0xfe092f6a6aef934b!2z576F5aSn5a6H5YuV54mp6Yar6Zmi772e5Lit6KW_5pW05ZCI6Yar5a246IiH5b6u5Ym15omL6KGT5Lit5b-D!5e1!3m2!1szh-TW!2stw!4v1747035281086!5m2!1szh-TW!2stw"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.638898382683!2d120.64703819999998!3d24.1493164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dac93728f7b%3A0x977f2d830f2c0c78!2z5q-b6LKT5a-15YuV54mp6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1747535549187!5m2!1szh-TW!2stw"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
