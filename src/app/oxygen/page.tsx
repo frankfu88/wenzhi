@@ -150,7 +150,7 @@ export default function NoahOxygen() {
         {/* 🔹 聯繫區塊 */}
         <div className="mt-12 bg-[#5A4032] text-white p-8 rounded-xl shadow-lg text-center">
           <h2 className="text-2xl font-bold">您的寵物有上述症狀嗎？</h2>
-          <p className="mt-2 text-lg">有任何問題請聯繫東南動物醫院，由專家來為您的寶貝提供治療！</p>
+          <p className="mt-2 text-lg">有任何問題請聯繫我們，由專家來為您的寶貝提供治療！</p>
           <button
             onClick={() => router.push("/#contact")}
             className="mt-4 bg-yellow-500 text-white py-3 px-6 rounded-lg text-lg font-bold hover:bg-yellow-600 transition"

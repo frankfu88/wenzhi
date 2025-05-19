@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <header className="bg-white text-gray-900 py-4 fixed top-0 left-0 w-full z-50 shadow-md backdrop-blur-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
-        <Link href="/" className="text-lg font-bold">毛貓寵動物醫院</Link>
+        <Link href="/" className="text-lg font-bold">文志動物醫院</Link>
 
         <button className="md:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>☰</button>
 
